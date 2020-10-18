@@ -29,7 +29,7 @@ gulp.task("css", function () {
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("source/css"))
     .pipe(server.stream());
 });
 
@@ -41,38 +41,46 @@ gulp.task("normalize", function () {
 
 gulp.task("server", function () {
   server.init({
-    server: "build",
+    server: "source/",
     notify: false,
     open: true,
     cors: true,
     ui: false,
     index: "index.html"
   });
-
-  gulp.watch("source/sass/*/.scss", gulp.series("css"));
-  gulp.watch("source/img/sprite-*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/scss/*/.scss", gulp.series("css"));
+  gulp.watch("source/images/sprite-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
   gulp.watch("source/js/*.js", gulp.series("js", "refresh"));
 });
 
 gulp.task("images", function () {
-  return gulp.src("source/img/*/.{png,jpg,svg}")
+  return gulp.src("source/images/*/.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.mozjpeg({quality: 75, progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/images"));
 });
 
 gulp.task("webp", function () {
   return gulp.src([
-    "source/img/*/.{png,jpg}",
-    "!source/img/ignored_by_webp/",
-    "!source/img/ignored_by_webp/*.{png,jpg}"
+    "source/images/*/.{png,jpg}",
+    "!source/images/ignored_by_webp/",
+    "!source/images/ignored_by_webp/*.{png,jpg}"
   ])
     .pipe(webp({quality: 75}))
     .pipe(gulp.dest("buld/img"));
+});
+
+gulp.task("sprite", function () {
+  return gulp.src("source/images/sprite-*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("html", function() {
@@ -114,5 +122,6 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-gulp.task("build", gulp.series("clean", "copy", "images", "webp", "normalize", "css", "html", "js"));
+gulp.task("gulp", gulp.series("css", "server"));
+gulp.task("build", gulp.series("clean", "copy", "images", "webp", "sprite", "normalize", "css", "html", "js"));
 gulp.task("start", gulp.series("build", "server"));
