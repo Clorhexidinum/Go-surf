@@ -1,0 +1,9 @@
+.slider-item {
+  position: relative;
+
+  &__info {
+    position: absolute;
+    right: 80px;
+    bottom: 116px;
+  }
+}

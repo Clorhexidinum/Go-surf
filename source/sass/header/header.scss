@@ -1,0 +1,9 @@
+.header {
+  &__slider-item {
+    height: 100vh;
+    background-image: url('../images/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  } 
+}
