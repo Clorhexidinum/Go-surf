@@ -5,5 +5,30 @@
     position: absolute;
     right: 80px;
     bottom: 116px;
+    text-align: right;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  &__info-subtitle {
+    margin-bottom: 5px;
+  }
+
+  &__info-title {
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 86px;
+    margin-bottom: 48px;
+  }
+
+  &__info-subtext {
+    margin-bottom: 8px;
+  }
+
+  &__info-text {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 20px;
   }
 }
