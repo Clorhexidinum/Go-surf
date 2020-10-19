@@ -1,5 +1,7 @@
 .slider-dots {
   position: absolute;
+  display: flex;
+  justify-content: space-between;
   right: 50px;
   bottom: 36px;
   max-width: 920px;

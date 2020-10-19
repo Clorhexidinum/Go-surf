@@ -1,12 +1,45 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+}
+
+p {
+  margin: 0;
+}
+
 body {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
-}
-
-a {
-  display: inline-block;
-  text-decoration: none;
+  margin: 0;
 }
 
 .subtitle-left {
@@ -21,10 +54,11 @@ a {
   display: inline-block;
 
   &::before {
+    content: "";
     position: absolute;
     width: 80px;
     height: 1px;
-    background-color: $white;
+    background-color: #ffffff;
     left: 0;
     top: 50%;
   }
