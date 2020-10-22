@@ -28,6 +28,20 @@
     position: absolute;
   }
 
+  &__arrows {
+    position: absolute;
+    bottom: 40px;
+    left: 210px;
+    z-index: 3;
+  }
+
+  &__map {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+  }
+
   &__slider-item {
     height: 100vh;
     background-image: url('../images/header-bg.jpg');
