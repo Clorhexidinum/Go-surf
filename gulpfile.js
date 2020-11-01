@@ -19,7 +19,10 @@ var uglify = require('gulp-uglify');
 var pipeline = require('readable-stream').pipeline;
 
 gulp.task("css", function () {
-  return gulp.src("source/sass/style.scss")
+  return gulp.src([
+    "source/sass/style.scss",
+    "node_modules/animate.css/animate.css",
+])
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
