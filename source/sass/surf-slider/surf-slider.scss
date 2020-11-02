@@ -1,0 +1,43 @@
+.surf-slider {
+  padding-top: 110px;
+
+  .slider-arrows {
+    top: 50px;
+    opacity: .25;
+  }
+
+  &__box {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__inner {
+    min-heigth: 750px;
+    background: rgba($black, .85);
+    position: relative;
+  }
+
+  &__inner-title {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 36px;
+    padding: 72px 0 0 40px;
+    width: 140px;
+  }
+
+  &__inner-location {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 8px;
+    transform: rotate(-90deg);
+
+    span {
+      font-weight: 100;
+    }
+  }
+
+  &__inner-btn {
+
+  }
+}
