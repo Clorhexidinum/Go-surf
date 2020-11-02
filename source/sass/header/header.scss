@@ -10,7 +10,6 @@
     border-right: 1px solid rgba(255, 255, 255, .25);
     height: 100vh;
     text-align: center;
-    color: #fff
     ;
   }
 
@@ -18,8 +17,6 @@
     font-weight: 800;
     font-size: 200px;
     line-height: 156px;
-    text-transform: uppercase;
-    color: $white;
     opacity: 0.07;
     max-width: 467px;
     top: 0;
@@ -30,7 +27,7 @@
 
   &__arrows {
     position: absolute;
-    bottom: 40px;
+    bottom: 30px;
     left: 210px;
     z-index: 3;
   }
@@ -79,6 +76,7 @@
     letter-spacing: 1.05px;
     position: relative;
     padding-left: 19px;
+    text-transform: capitalize;
   }
 
   &__location::before {
