@@ -86,16 +86,16 @@ body {
   }
 }
 
-.line-animation {
-  stroke-dashoffset: 600;
-  stroke-dasharray: 600;
-  animation: animdash 5s infinity 6s;
-}
-
 @keyframes animdash {
   to {
     stroke-dashoffset: 0;
   }
+}
+
+.line-animation {
+  stroke-dashoffset: 600;
+  stroke-dasharray: 600;
+  animation: animdash 5s infinity 6s;
 }
 
 .title {

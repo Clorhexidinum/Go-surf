@@ -14,7 +14,7 @@
   }
 
   &__inner {
-    min-heigth: 750px;
+    min-height: 750px;
     background: rgba($black, .85);
     position: relative;
   }
@@ -33,7 +33,7 @@
     letter-spacing: 8px;
     transform: rotate(-90deg);
 
-    span {
+    & span {
       font-weight: 100;
     }
   }
