@@ -1,0 +1,67 @@
+.slider-map {
+  min-width: 1200px;
+  min-height: 635px;
+  background-image: url('../images/world-map-dots.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin: 0 auto;
+
+  &.slick-list {
+    min-height: 635px;
+  }
+
+  &__circle {
+    width: 24px;
+    height: 24px;
+    background-color: $green;
+    border-radius: 50%;
+  } 
+
+  &__content {
+    display: none;
+  }
+
+  &__dots {
+    position: relative;
+    &--1 {
+      top: 335px;
+      left: 0;
+    }
+
+    &--2 {
+      top: 270px;
+      left: 0;
+    }
+
+    &--3 {
+      top: 330px;
+      left: 25px;
+    }
+
+    &--4 {
+      top: 470px;
+      left: -25px;
+    }
+
+    &--5 {
+      top: 230px;
+      left: -65px;
+    }
+
+    &--6 {
+      top: 550px;
+      left: -120px;
+    }
+
+    &--7 {
+      top: 375px;
+      left: -95px;
+    }
+
+    &--8 {
+      top: 470px;
+      left: 35px;
+    }
+  }
+}
