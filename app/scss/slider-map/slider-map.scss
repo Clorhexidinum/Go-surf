@@ -11,19 +11,74 @@
     min-height: 635px;
   }
 
+  &.slick-current {
+    &.slider-map__content {
+      display: block;
+      width: 285px;
+      padding: 28px 31px 0 32px;
+    }
+  }
+
   &__circle {
     width: 24px;
     height: 24px;
     background-color: $green;
     border-radius: 50%;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/mini-marker.png');
+      width: 14px;
+      height: 17px;
+      background-size: cover;
+      right: -15px;
+      top: -25px;
+    }
   } 
 
   &__content {
     display: none;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    z-index: 5;
+  }
+
+  &__content-row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+  }
+
+  &__content-title {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 8px;
+    margin-bottom: 8px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: $green;
+      width: 80px;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__content-subtitle {
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 19px;
   }
 
   &__dots {
     position: relative;
+    cursor: pointer;
     &--1 {
       top: 335px;
       left: 0;
@@ -32,6 +87,22 @@
     &--2 {
       top: 270px;
       left: 0;
+
+      &.slider-map__circle {
+        border-radius: 50%;
+        position: relative;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          background-image: url('../images/mini-marker.png');
+          width: 14px;
+          height: 17px;
+          background-size: cover;
+          right: -15px;
+          top: -25px;
+        }
+      } 
     }
 
     &--3 {
@@ -63,5 +134,28 @@
       top: 470px;
       left: 35px;
     }
+  }
+
+  &__content-link {
+    padding-top: 4px;
+  }
+
+  &__content-item {
+    text-align: center;
+    & img {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__content-number {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  &__content-name {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
   }
 }
