@@ -1,0 +1,33 @@
+.subtitle {
+  display: inline-block;
+
+  &__head {
+    font-weight: 800;
+    font-size: 40px;
+    padding-right: 10px;
+
+    span {
+      font-weight: 100;
+    }
+  }
+
+  &__left {
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 7.33333px;
+    opacity: 0.5;
+    padding-left: 103px;
+    position: relative;
+    display: inline-block;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 1px;
+      background-color: #ffffff;
+      left: 0;
+      top: 50%;
+    }
+  }
+}
