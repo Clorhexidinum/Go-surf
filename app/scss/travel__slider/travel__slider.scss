@@ -1,0 +1,74 @@
+.travel-slider {
+  &__head {
+    background-repeat: no-repeat;
+    background-position: top left;
+    min-height: 780px;
+  }
+
+  &__decr {
+    margin-top: -230px;
+    padding: 160px 0 0 132px;
+    text-align: left;
+    min-height: 320px;
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    & .subtitle {
+      padding: 132px 80px 0 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__info-item {
+    min-height: 200px;
+    margin-bottom: 66px;
+    position: relative;
+  }
+
+  &__info-subtitle {
+    position: absolute;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 8px;
+    opacity: 0.5;
+    transform: rotate(-90deg);
+    left: -97px;
+    top: 97px;
+    width: 200px;
+    height: 0;
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  &__info-title {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 36px;
+    padding-left: 40px;
+    position: relative;
+
+    & span {
+      position: absolute;
+      bottom: -8px;
+      right: 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 36px;
+      letter-spacing: 5.25px;
+      opacity: 0.75;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+  }
+
+  & .slider-arrows {
+    top: 225px;
+    opacity: .5;
+  }
+}

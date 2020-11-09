@@ -30,5 +30,14 @@ $(function(){
     asNavFor: '.surf-slider',
     focusOnSelect: true
   });
+
+  $('.travel__slider').slick({
+    infinite: true,
+    fade: true,
+    cssEase: 'linear',
+    prevArrow: '<img class="slider-arrows slider-arrows__left" src="images/arrows-left.svg" alt="">',
+    nextArrow: '<img class="slider-arrows slider-arrows__right" src="images/arrows-right.svg" alt="">',
+  });
+
 });
 
