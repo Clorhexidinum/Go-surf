@@ -132,3 +132,10 @@ body {
     }
   }
 }
+
+.star-list {
+  & li {
+    display: inline-block;
+    margin-left: -25px;
+  }
+}

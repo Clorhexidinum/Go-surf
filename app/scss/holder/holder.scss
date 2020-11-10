@@ -4,4 +4,8 @@
   background-repeat: no-repeat;
   padding-bottom: 265px;
   margin-bottom: 35px;
+
+  &.sleep {
+    background-image: url('../images/frangipani.png');
+  }
 }

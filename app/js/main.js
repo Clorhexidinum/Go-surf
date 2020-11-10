@@ -69,7 +69,14 @@ $(function(){
       spinner.find("input").val(newVal);
       spinner.find("input").trigger("change");
     });
-
   });
+
+  $('.quantity__button').on('click', function(){
+    let summ = $('nights').val() * $('.summ').data('nights') + ($('guests').val() - 1) * $('.summ').data('guests');
+    $('.summ').html('$' + summ);
+  });
+
+  let summ = $('nights').val() * $('.summ').data('nights') + ($('guests').val() - 1) * $('.summ').data('guests');
+  $('.summ').html('$' + summ);
 });
 
