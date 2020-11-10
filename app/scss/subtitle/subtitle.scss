@@ -9,7 +9,7 @@
 
     &__descr {
       position: relative;
-      padding-right: 78px;
+      padding-right: 215px;
     }
 
     & span {
@@ -20,6 +20,20 @@
       position: absolute;
       right: 0;
       top: 0;
+    }
+
+    & .holder__star-list {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      & li {
+        display: inline-block;
+        margin-left: -25px;
+      }
+      & img {
+        position: static;
+      }
     }
   }
 

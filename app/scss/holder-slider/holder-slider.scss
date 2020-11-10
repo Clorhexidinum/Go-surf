@@ -1,4 +1,4 @@
-.travel-slider {
+.holder-slider {
   &__head {
     background-repeat: no-repeat;
     background-position: top left;
@@ -51,7 +51,7 @@
     padding-left: 40px;
     position: relative;
 
-    & span {
+    & .holder-slider__pricing {
       position: absolute;
       bottom: -8px;
       right: 0;
