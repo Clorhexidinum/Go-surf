@@ -78,5 +78,9 @@ $(function(){
 
   let summ = $('nights').val() * $('.summ').data('nights') + ($('guests').val() - 1) * $('.summ').data('guests');
   $('.summ').html('$' + summ);
+
+  $('.shop__sufboard-circle').om('click', function(){
+    $(this).toggleClass('active')
+  });
 });
 

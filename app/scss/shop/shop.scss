@@ -104,6 +104,12 @@
     border-radius: 50%;
     background-color: $white;
     cursor: pointer;
+
+    &.active {
+      &.shop__circle-row {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+    }
   }
 
   &__circle-row {
@@ -113,6 +119,10 @@
     height: 2px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(0deg);
+
+    & + .shop__circle-row {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
   }
 }
