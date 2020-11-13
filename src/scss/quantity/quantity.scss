@@ -1,0 +1,59 @@
+.quantity {
+  display: inline-block;
+
+   input[type=number]::-webkit-inner-spin-button,
+   input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+   input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+   input {
+    width: 42px;
+    height: 42px;
+    display: block;
+    border: none;
+    background-color: transparent;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 36px;
+    padding-left: 40px;
+    color: #ffffff;
+  }
+
+   input:focus {
+    outline: 0;
+  }
+
+  &__nav {
+    float: left;
+    position: static;
+    height: 42px;
+  }
+
+  &__button {
+    position: relative;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 45px;
+  }
+
+  &__button.quantity__up {
+    right: 0;
+    width: 15px;
+    height: 3px;
+    background-color: red;
+  }
+
+  &__button.quantity__down {
+    right: 25px;
+  }
+}

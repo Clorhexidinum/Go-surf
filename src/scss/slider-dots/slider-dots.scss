@@ -1,0 +1,38 @@
+.slider-dots {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  right: 50px;
+  bottom: 36px;
+  max-width: 920px;
+  width: 100%;
+  color: $white;
+  padding-top: 6px;
+
+  .slick-current {
+    &.slider-dots {
+      border-top: 4px solid $green;
+    }
+  }
+
+  &__box {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    height: 28px;
+    align-items: center;
+    border-top: 4px solid $white;
+  }
+
+  &__number {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  &__name {
+    line-height: 19px;
+    text-transform: capitalize;
+    font-weight: 300;
+  }
+}
