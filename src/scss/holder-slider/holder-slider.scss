@@ -5,6 +5,11 @@
     min-height: 780px;
   }
 
+  &__subtitle {
+    padding-right: 80px;
+    text-align: right;
+  }
+
   &__decr {
     margin-top: -230px;
     padding: 160px 0 0 132px;
@@ -67,10 +72,5 @@
 
   &__btn {
     text-align: center;
-  }
-
-  & .slider-arrows {
-    top: 225px;
-    opacity: .5;
   }
 }

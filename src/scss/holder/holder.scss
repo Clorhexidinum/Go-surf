@@ -8,4 +8,9 @@
   &.sleep {
     background-image: url('../images/frangipani.png');
   }
+
+  & .slider-arrows {
+    opacity: .25;
+    top: 100px;
+  }
 }
