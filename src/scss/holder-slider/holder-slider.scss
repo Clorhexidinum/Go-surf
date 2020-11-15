@@ -15,6 +15,7 @@
     background-size: contain;
 
     & .subtitle {
+      margin-bottom: 100px;
       padding: 132px 80px 0 0;
     }
   }
@@ -54,7 +55,7 @@
 
     & .holder-slider__pricing {
       position: absolute;
-      bottom: -8px;
+      bottom: -30px;
       right: 0;
       font-weight: 400;
       font-size: 14px;

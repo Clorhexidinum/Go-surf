@@ -20,7 +20,7 @@ $(function(){
     slidesToScroll: 1,
     prevArrow: '<img class="slider-arrows slider-arrows__left" src="images/arrows-left.svg" alt="">',
     nextArrow: '<img class="slider-arrows slider-arrows__right" src="images/arrows-right.svg" alt="">',
-   asNavFor: '.slider-map',
+    asNavFor: '.slider-map',
   });
 
   $('.slider-map').slick({
@@ -43,8 +43,8 @@ $(function(){
   $('.quantity').each(function() {
     var spinner = $(this),
       input = spinner.find('input[type="number"]'),
-      btnUp = spinner.find('.quantity-up'),
-      btnDown = spinner.find('.quantity-down'),
+      btnUp = spinner.find('.quantity__up'),
+      btnDown = spinner.find('.quantity__down'),
       min = input.attr('min'),
       max = input.attr('max');
 
@@ -73,14 +73,14 @@ $(function(){
   });
 
   $('.quantity__button').on('click', function(){
-    let summ = $('nights').val() * $('.summ').data('nights') + ($('guests').val() - 1) * $('.summ').data('guests');
-    $('.summ').html('$' + summ);
+    let summ = $('.nights').val() * $('.summ').data('nights') + ($('.guests').val() - 1) * $('.summ').data('guests');
+    $('.summ').html('$' + summ);  
   });
 
-  let summ = $('nights').val() * $('.summ').data('nights') + ($('guests').val() - 1) * $('.summ').data('guests');
-  $('.summ').html('$' + summ);
+  let summ = $('.nights').val() * $('.summ').data('nights') + ($('.guests').val() - 1) * $('.summ').data('guests');
+  $('.summ').html('$' + summ);  
 
-  $('.shop__sufboard-circle').om('click', function(){
+  $('.shop__sufboard-circle').on('click', function(){
     $(this).toggleClass('active')
   });
 });

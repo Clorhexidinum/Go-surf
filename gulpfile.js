@@ -53,7 +53,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/slick-carousel/slick/slick.js', 'src/js/**/*.js'])
+  return gulp.src('src/js/**/*.js')
     .pipe(sourcemap.init())
     .pipe(rollup({
       input: './src/js/main.js',

@@ -951,7 +951,7 @@
                 <div class="holder-slider__info-subtitle"># of Nights</div>
                 <div class="holder-slider__info-title">
                   <div class="quantity">
-                    <input class="nigths" type="number" min="1" max="9" step="1" value="5">
+                    <input class="nights" type="number" min="1" max="9" step="1" value="5" disabled>
                   </div> 
                   Nights</div>
                 </div>
@@ -959,13 +959,17 @@
                 <div class="holder-slider__info-subtitle"># of Guests</div>
                 <div class="holder-slider__info-title">
                   <div class="quantity">
-                    <input class="guests" type="number" min="1" max="9" step="1" value="4">
+                    <input class="guests" type="number" min="1" max="9" step="1" value="4" disabled>
                   </div> 
                   Guests</div>
                 </div>
               <div class="holder-slider__info-item">
                 <div class="holder-slider__info-subtitle">Pricing</div>
-                <div class="holder-slider__info-title">$<span class="summ" data-nigth="55" data-guest="25">349 USD</span><span class="holder-slider__pricing">Per Night</span></div>
+                <div class="holder-slider__info-title">
+                  <span class="summ" data-nights="55" data-guests="25"></span>
+                  USD
+                  <span class="holder-slider__pricing">Per Night</span>
+                </div>
               </div>
             </div>
             <div class="holder-slider__btn">
@@ -1690,6 +1694,8 @@
       </div>
   </footer>
   
+  <script src="js/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 </html>
