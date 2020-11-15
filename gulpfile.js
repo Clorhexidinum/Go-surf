@@ -38,7 +38,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('css', function() {
-  return gulp.src(['src/css/normalize.css', 'src/scss/style.scss'])
+  return gulp.src(['src/css/normalize.css', 'node_modules/slick-carousel/slick/slick.scss', 'src/scss/style.scss'])
     .pipe(sourcemap.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
@@ -53,7 +53,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src('src/js/**/*.js')
+  return gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/slick-carousel/slick/slick.js', 'src/js/**/*.js'])
     .pipe(sourcemap.init())
     .pipe(rollup({
       input: './src/js/main.js',
@@ -65,6 +65,7 @@ gulp.task('scripts', function() {
       presets: ['@babel/preset-env']
     }))
     .pipe(uglify())
+	.pipe(concat('main.js'))
     .pipe(rename('main.min.js'))
     .pipe(sourcemap.write('../maps'))
     .pipe(gulp.dest('build/js/'))
