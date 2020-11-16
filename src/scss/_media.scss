@@ -1,0 +1,177 @@
+@media (max-width: 1440px) {
+  .logo {
+    & img {
+      width: 100px;
+    }
+  }
+
+  .header {
+    &__title {
+      font-size: 130px;
+      line-height: 108px;
+      top: 20px;
+      left: 60px;
+    }
+
+    &__search {
+      padding-bottom: 8px;
+    }
+
+    &__date{
+      font-size: 60px;
+      
+      & span {
+        font-size: 14px;
+        padding-top: 0;
+        margin-bottom: 5px;
+      }
+    }
+    
+    &__arrows {
+      left: 130px;
+    }
+  }
+
+  .menu {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .header {
+    &__aside {
+      position: absolute;
+      border-right: none;
+      height: 108px;
+      padding-right: 25px;
+      background-color: rgba(#fff, .1);
+      text-align: left;
+      display: flex;
+    }
+
+    &__search {
+      padding: 33px 15px 15px;
+    }
+
+    &__date {
+      padding: 15px;
+    }
+
+    &__location {
+      margin-top: 42px;
+    }
+
+    &__arrows {
+      left: 20px;
+      bottom: 20px;
+    }
+  }
+
+  .menu {
+    padding-top: 0;
+    
+    &__list {
+      text-emphasis: circle; 
+
+      & li {
+        display: inline-block;
+      } 
+
+      & a {
+        padding: 15px;
+      }
+    }
+  }
+
+  .slider-item {
+    &__info-title {
+      font-size: 65px;
+    }
+  }
+}
+
+@media (max-width: 1340px) {
+  .header {
+    & svg {
+      width: 500px;
+      height: 250px;
+    }
+
+    & .slider-arrows {
+      top: 20px;
+      right: 20px;
+
+      &__left {
+        right: 60px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1040px) {
+  .header {
+    &__arrows {
+      display: none;
+    }
+
+    &__search {
+      padding: 40px 15px 15px;
+    }
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .slider-item {
+    &__info {
+      right: 20px;
+      bottom: 17px;
+    }
+
+    &__info-title {
+      font-size: 55px;
+      line-height: 55px;
+      margin-bottom: 20px;
+    }
+
+    &__info-text {
+      font-size: 30px;
+      line-height: 20px;
+      margin-bottom: 15px;
+    }
+
+    &__info-subtext {
+      margin-bottom: 5px;
+    }
+  }
+
+  .headline-left {
+    font-size: 16px;
+    line-height: 18px;
+    padding-left: 65px;
+
+    &::before {
+      width: 50px;
+    }
+  }
+
+  .slider-dots {
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    bottom: 5px;
+
+    &__box {
+      width: 125px;
+    }
+
+    &__number {
+      font-size: 18px;
+    }
+
+    &__name {
+      line-height: 18px;
+    }
+  }
+}

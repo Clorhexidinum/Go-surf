@@ -52,20 +52,20 @@
     padding-bottom: 25px;
   }
 
-  &__day {
+  &__date {
     font-weight: 800;
     font-size: 72px;
     line-height: 64px;
-  }
 
-  &__day span {
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 1.4px;
-    margin-bottom: 30px;
-    display: block;
-    padding-top: 15px;
+    & span {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 1.4px;
+      margin-bottom: 30px;
+      display: block;
+      padding-top: 15px;
+    }
   }
 
   &__location {
