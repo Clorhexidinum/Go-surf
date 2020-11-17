@@ -83,5 +83,9 @@ $(function(){
   $('.shop__sufboard-circle').on('click', function(){
     $(this).toggleClass('active')
   });
+
+  $('.menu__btn').on('click', function(){
+    $('.menu').addClass('active');
+  });
 });
 
