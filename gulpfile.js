@@ -5,6 +5,7 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const webp = require("gulp-webp");
 const imagemin = require('gulp-imagemin');
 const jpegRecompress = require('imagemin-jpeg-recompress');
 const pngquant = require('imagemin-pngquant');
@@ -38,7 +39,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('css', function() {
-  return gulp.src(['src/css/normalize.css', 'node_modules/slick-carousel/slick/slick.scss', 'src/scss/style.scss'])
+  return gulp.src(['src/css/normalize.css', 'src/scss/style.scss'])
     .pipe(sourcemap.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
@@ -65,12 +66,25 @@ gulp.task('scripts', function() {
       presets: ['@babel/preset-env']
     }))
     .pipe(uglify())
-	.pipe(concat('main.js'))
-    .pipe(rename('main.min.js'))
+    .pipe(concat('main.js'))
+    .pipe(rename(function (path) {
+      path.basename += ".min";
+      path.extname = ".js";
+    }))
     .pipe(sourcemap.write('../maps'))
     .pipe(gulp.dest('build/js/'))
     .pipe(browserSync.stream());
 });
+
+// gulp.task("webp", function () {
+//   return gulp.src([
+//     "source/images/*/.{png,jpg}",
+//     "!source/images/ignored_by_webp/",
+//     "!source/images/ignored_by_webp/*.{png,jpg}"
+//   ])
+//     .pipe(webp({quality: 75}))
+//     .pipe(gulp.dest("build/images"));
+// });
 
 gulp.task('images', function() {
   return gulp.src('src/images/**/*.*')
