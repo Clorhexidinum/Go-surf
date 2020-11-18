@@ -35,6 +35,12 @@
   .menu {
     padding-top: 10px;
   }
+
+  .surf-slider {
+    &__inner {
+      min-height: 650px;
+    }
+  }
 }
 
 @media (max-width: 1366px) {
