@@ -371,6 +371,23 @@
       padding-left: 0;
     }
   }
+
+  .quantity {
+    &__button.quantity__up {
+      right: auto;
+      left: 25px;
+    }
+
+    &__button.quantity__down {
+      right: auto;
+    }
+  }
+
+  .sleep {
+    & .holder-slider__decr {
+      background-position: right 10px;
+    }
+  }
 }
 
 @media (max-width: 960px) {
@@ -480,6 +497,18 @@
       width: 250px;
       padding: 28px 15px 0;
     }
+  }
+
+  .holder-slider {
+    &__decr .subtitle__head {
+      & .holder__star-list {
+        position: static;
+        margin-left: -15px;
+      }
+
+      & .subtitle__head--descr {
+        padding-right: 0;
+      }
   }
 }
 
