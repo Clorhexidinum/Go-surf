@@ -114,6 +114,18 @@
   }
 }
 
+@media (max-width: 1287px) {
+  .slider-map {
+    &.slick-list {
+      overflow: hidden;
+    }
+
+    &__circle {
+      box-shadow: none;
+    }
+  }
+}
+
 @media (max-width: 1250px) {
   .slider-map {
     max-width: 1000px;
@@ -166,10 +178,14 @@
   .slider-map {
     background-image: none;
     min-width: 100%;
-
+    min-height: 280px;
 
     &__dots {
       position: static;
+
+      &--8 .slider-dots__content {
+        transform: translateX(0);
+      }
     }
 
     &__circle {
@@ -177,6 +193,11 @@
     }
 
     &__content {
+      transform: translateX(0);
+      width: 285px;
+      padding: 20px 31px 0 32px;
+      background-color: rgba(15, 16, 16, 0.7);
+
       &::before {
         display: none;
       } 
@@ -184,8 +205,16 @@
 
     &.slick-list {
       overflow: hidden;
+      min-height: 280px;
     }
 
+    &.slick-track {
+      min-height: 280px;
+    }
+
+    &.slick-current .slider-map__content-item {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
@@ -257,6 +286,12 @@
     }
   }
 
+  .surf {
+    &__subtitle {
+      padding-right: 20px;
+    }
+  }
+  
   .slider-dots {
     margin: 0 auto;
     right: 0;
@@ -283,8 +318,44 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   
+}
+
+@media (max-width: 720px) {
+  .title {
+    & span {
+      font-size: 100px;
+      padding-bottom: 80px;
+      padding-left: 10px;
+    }
+  }
+
+  .surf,
+  .holer {
+    padding: 70px 0 50px;
+  }
+}
+
+@media (max-width: 520px) {
+  .headline-left {
+    letter-spacing: 2.33333px;
+  }
+
+  .subtitle{
+    &__head {
+      font-size: 32px;
+      padding-right: 0;
+    }
+  }
+
+  .surf-slider {
+    padding-top: 65px;
+
+    & .slider-arrows {
+      top: 20px;
+    }
+  }
 }
 
 @media (max-width: 460px) {
@@ -316,6 +387,26 @@
 
     &__location {
       margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .slider-map {
+    & .slider-map__content-item,
+    &.slick-current .slider-map__content-item {
+      width: 250px;
+      padding: 28px 15px 0;
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .slider-map {
+    & .slider-map__content-item,
+    &.slick-current .slider-map__content-item {
+      width: 200px;
+      padding: 28px 10px 0;
     }
   }
 }

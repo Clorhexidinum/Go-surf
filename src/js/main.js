@@ -34,6 +34,20 @@ $(function(){
           slidesToShow: 3,
         }
       },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          centerMode: true,
+        }
+      },
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+        }
+      },
     ]
   });
 
@@ -43,6 +57,34 @@ $(function(){
     arrows: false,
     asNavFor: '.surf-slider',
     focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1103,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          centerMode: true,
+        }
+      },
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+        }
+      },
+      {
+        breakpoint: 426,
+        settings: {
+          centerMode: false,
+        }
+      },
+    ]
   });
 
   $('.holder__slider, .shop__slider').slick({
