@@ -174,6 +174,19 @@
   } 
 }
 
+@media (max-width: 1150px) {
+  .surf,
+  .holer {
+    padding: 70px 0 50px;
+  }
+
+  .holder-slider {
+    &__decr {
+      padding: 160px 0 0 20px;
+    }
+  }
+}
+
 @media (max-width: 1102px) {
   .slider-map {
     background-image: none;
@@ -286,6 +299,18 @@
     }
   }
 
+  .subtitle {
+    &__right {
+      font-size: 16px;
+      line-height: 18px;
+      padding-right: 65px;
+  
+      &::before {
+        width: 50px;
+      }
+    }
+  }
+
   .surf {
     &__subtitle {
       padding-right: 20px;
@@ -310,6 +335,42 @@
       line-height: 18px;
     }
   }
+
+  .holder {
+    &.title {
+      & span {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .holder-slider {
+    &__decr {
+      background-position:  right -119px;
+    }
+
+    &__info {
+      display: block;
+    }
+
+    &__info-item {
+      min-height: auto;
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    &__info-subtitle {
+      position: static;
+      transform: rotate(0deg);
+      height: auto;
+      width: auto;
+      text-align: left;
+    }
+
+    &__info-title {
+      padding-left: 0;
+    }
+  }
 }
 
 @media (max-width: 960px) {
@@ -325,15 +386,32 @@
 @media (max-width: 720px) {
   .title {
     & span {
-      font-size: 100px;
+      font-size: 87px;
       padding-bottom: 80px;
       padding-left: 10px;
     }
   }
 
-  .surf,
-  .holer {
-    padding: 70px 0 50px;
+  .holder-slider {
+    &__head {
+      min-height: 720px;
+    }
+
+    &__subtitle {
+      padding: 100px 20px 0 0;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .holder-slider {
+    &__decr {
+      background-image: none !important; 
+    }
+  }
+
+  .btn {
+    font-size: 30px;
   }
 }
 
@@ -388,6 +466,10 @@
     &__location {
       margin-top: 0;
     }
+  }
+
+  .holder {
+    background-size: 120px;
   }
 }
 
