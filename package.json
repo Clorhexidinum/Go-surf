@@ -47,6 +47,7 @@
   "author": "thedoft",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^4.1.1",
     "jquery": "^3.5.1",
     "slick-carousel": "^1.8.1"
   }

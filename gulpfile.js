@@ -5,7 +5,7 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const webp = require("gulp-webp");
+// const webp = require("gulp-webp");
 const imagemin = require('gulp-imagemin');
 const jpegRecompress = require('imagemin-jpeg-recompress');
 const pngquant = require('imagemin-pngquant');
@@ -54,7 +54,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src('src/js/**/*.js')
+  return gulp.src(['node_modules/jquery/dist/jquery.js, node_modules/slick-carousel/slick/slick.js, src/js/**/*.js'])
     .pipe(sourcemap.init())
     .pipe(rollup({
       input: './src/js/main.js',
