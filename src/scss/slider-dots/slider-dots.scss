@@ -9,8 +9,14 @@
   color: $white;
   padding-top: 6px;
 
-  .slick-current {
-    &.slider-dots {
+  & .slick-track {
+    width: 920px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & .slick-current {
+    & .slider-dots__box {
       border-top: 4px solid $green;
     }
   }

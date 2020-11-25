@@ -141,7 +141,7 @@ $(function(){
   });
 
   $('.menu__btn').on('click', function(){
-    $('.menu').addClass('active');
+    $('.menu').toggleClass('active');
   });
 
   new Window().init();

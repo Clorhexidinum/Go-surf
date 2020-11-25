@@ -13,15 +13,15 @@
     }
   }
 
-  &.slick-current {
-    &.slick-slide__inner-btn {
+  & .slick-current {
+    & .surf-slider__inner-btn {
       display: block;
     }
 
-    &surf-slider__inner {
+    & .surf-slider__inner {
       background: rgba($black, .3);
     }
-  }
+  } 
 
   .slider-arrows {
     top: 50px;
@@ -45,7 +45,7 @@
     &:hover {
       background: rgba($black, .3);
 
-      &.slick-slide__inner-btn {
+      & .surf-slider__inner-btn {
         display: block;
       }
     }
