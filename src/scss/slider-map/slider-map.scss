@@ -7,13 +7,13 @@
   background-position: center center;
   margin: 0 auto;
 
-  &.slick-list {
+  & .slick-list {
     min-height: 635px;
     overflow: visible;
   }
 
-  &.slick-current {
-    &.slider-map__content {
+  & .slick-current {
+    & .slider-map__content {
       display: block;
       width: 285px;
       padding: 28px 31px 0 32px;
@@ -27,17 +27,6 @@
     border-radius: 50%;
     position: relative;
     box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
-
-    &::before {
-      content: '';
-      position: absolute;
-      background-image: url('../images/mini-marker.png');
-      width: 14px;
-      height: 17px;
-      background-size: cover;
-      right: -15px;
-      top: -25px;
-    }
   } 
 
   &__content {
@@ -115,7 +104,7 @@
       top: 270px;
       left: 0;
 
-      &.slider-map__circle {
+      & .slider-map__circle {
         border-radius: 50%;
         position: relative;
     
